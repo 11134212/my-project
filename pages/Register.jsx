@@ -1,5 +1,4 @@
 import { Typography, TextField, Button } from '@mui/material'
-import Link from 'next/link'
 
 const Register = () => {
 	return (
@@ -54,12 +53,7 @@ const Register = () => {
 				variant='subtitle2'
 				component='h2'
 				padding={2}
-			>
-				У вас есть аккаунт?
-				<Link style={{ marginLeft: '5px' }} href='/register'>
-					Регистрация
-				</Link>
-			</Typography>
+			></Typography>
 		</div>
 	)
 }
