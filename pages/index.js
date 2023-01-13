@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useState } from 'react'
-import { MdKeyboardArrowUp } from 'react-icons/md'
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md'
 
 export default function Home() {
 	const [open, setOpen] = useState(false)
@@ -113,7 +113,11 @@ export default function Home() {
 					<div className='ques'>
 						<div className='mainquestion' onClick={() => setIsOpen(true)}>
 							<p>Как создать плейлист?</p>
-							<MdKeyboardArrowUp style={{ width: '24px' }} />
+							{open ? (
+								<MdKeyboardArrowDown style={{ width: '24px' }} />
+							) : (
+								<MdKeyboardArrowUp style={{ with: '24px' }} />
+							)}
 						</div>
 						{open && (
 							<>
@@ -137,7 +141,11 @@ export default function Home() {
 					<div className='ques'>
 						<div className='mainquestion' onClick={() => setIsOpen1(true)}>
 							<p>Как включить режим экономии трафика?</p>
-							<MdKeyboardArrowUp style={{ width: '24px' }} />
+							{open1 ? (
+								<MdKeyboardArrowDown style={{ width: '24px' }} />
+							) : (
+								<MdKeyboardArrowUp style={{ with: '24px' }} />
+							)}
 						</div>
 						<div className='quest'>
 							{open1 && (
@@ -153,7 +161,11 @@ export default function Home() {
 					<div className='ques'>
 						<div className='mainquestion' onClick={() => setIsOpen2(true)}>
 							<p>Музыку можно слушать только вперемешку?</p>
-							<MdKeyboardArrowUp style={{ width: '24px' }} />
+							{open2 ? (
+								<MdKeyboardArrowDown style={{ width: '24px' }} />
+							) : (
+								<MdKeyboardArrowUp style={{ with: '24px' }} />
+							)}
 						</div>
 						{open2 && (
 							<>

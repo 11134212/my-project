@@ -1,3 +1,4 @@
+import { SessionProvider } from 'next-auth/react'
 import '../styles/globals.scss'
 import '../styles/index.scss'
 import '../styles/login.scss'
