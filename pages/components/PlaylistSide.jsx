@@ -1,7 +1,10 @@
 import Link from 'next/link'
+import { useState } from 'react'
 import { MdArrowBackIos, MdArrowForwardIos } from 'react-icons/md'
+import { signOut } from 'next-auth/react'
 
 export const PlaylistSide = () => {
+	const [open, setOpen] = useState(false)
 	return (
 		<div className='playlists'>
 			<div className='header2' style={{ height: '65px' }}>
@@ -24,11 +27,7 @@ export const PlaylistSide = () => {
 						Скачать
 					</Link>
 					|
-					<Link
-						className='link'
-						href={'/Register'}
-						style={{ letterSpacing: '0px' }}
-					>
+					<Link className='link' href={'/'} style={{ letterSpacing: '0px' }}>
 						Зарегистрироваться
 					</Link>
 					<Link className='link' href={'/Login'}>
@@ -36,6 +35,7 @@ export const PlaylistSide = () => {
 							<span>Войти</span>
 						</button>
 					</Link>
+					<button Onclick={() => signOut()}>log out</button>
 				</div>
 			</div>
 			<div className='mainplaylist'>

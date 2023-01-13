@@ -5,7 +5,6 @@
 		background-color: black;
 		padding-top: 24px;
 		width: 393px;
-
 		height: 662px;
 		.active {
 			margin-top: 30px;
@@ -63,20 +62,19 @@
 		}
 	}
 	.playlists {
-		background-color: rgb(83, 83, 83);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		max-height: 691px;
 		height: 100%;
-		width: 1154px;
+		max-width: 1519px;
 		background-image: linear-gradient(
 				rgba(0, 0, 0, 0.6) 0,
 				var(--background-base) 100%
 			),
 			var(--background-noise);
 		.header2 {
-			width: 1154px;
+			width: 1143px;
 			background-color: #0f0f0f;
 			padding: 8px 0;
 			display: flex;
@@ -139,11 +137,10 @@
 			}
 		}
 		.mainplaylist {
-			background-image: linear-gradient(
-					rgba(0, 0, 0, 0.6) 0,
-					var(--background-base) 100%
-				),
-				var(--background-noise);
+			overflow-y: scroll;
+			width: 1143px;
+			background-color: black;
+			overflow-y: hidden;
 		}
 	}
 }
