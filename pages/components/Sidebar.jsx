@@ -1,9 +1,12 @@
+import { useSession } from 'next-auth/react'
 import React from 'react'
 import { MdHomeFilled, MdAdd } from 'react-icons/md'
 import { RiSearchLine, RiHeartLine } from 'react-icons/ri'
 import { TfiLayoutMediaRightAlt } from 'react-icons/tfi'
 
 export const Sidebar = () => {
+	const { data: session, status } = useSession()
+	console.log(session)
 	return (
 		<div className='catalog'>
 			<img

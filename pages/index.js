@@ -37,7 +37,7 @@ export default function Home() {
 						Скачать
 					</Link>
 					|
-					<Link className='link' href={'/Register'}>
+					<Link className='link' href={'/'}>
 						Зарегистрироваться
 					</Link>
 					<Link className='link' href={'/Login'}>
